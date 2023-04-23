@@ -15,7 +15,10 @@ public class PlayerManager : MonoBehaviour
     public void Damage(int damege)
     {
         hp -= damege;
-        Debug.Log("Player‚ÌHP‚Í"+hp);
+        if (hp <= 0)
+        {
+            hp = 0;
+        }
     }
 
 }

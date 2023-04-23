@@ -17,7 +17,10 @@ public class EnemyManager : MonoBehaviour
     public void Damage(int damege)
     {
         hp -= damege;
-        Debug.Log("Enemy‚ÌHP‚Í" + hp);
+        if(hp <= 0)
+        {
+            hp = 0;
+        }
     }
     public void AddEventListenerOnTap(Action action)
     {

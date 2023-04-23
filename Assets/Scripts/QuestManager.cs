@@ -41,10 +41,8 @@ public class QuestManager : MonoBehaviour
     {
         stageUI.UpdateUI(currentStage);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void EndBattle()
     {
-        
+        stageUI.ShowButtons(true); ;
     }
 }
