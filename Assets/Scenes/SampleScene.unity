@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e82b725e8ba6e439c3f2e15e0a6af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageUI: {fileID: 751612392}
 --- !u!1 &692979288
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,8 +534,9 @@ GameObject:
   - component: {fileID: 751612390}
   - component: {fileID: 751612389}
   - component: {fileID: 751612388}
+  - component: {fileID: 751612392}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StageUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,6 +626,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &751612392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751612387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3776ca28f39444185cdcbc8a18d995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageText: {fileID: 1436117875}
 --- !u!1 &1436117873
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +651,7 @@ GameObject:
   - component: {fileID: 1436117876}
   - component: {fileID: 1436117875}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: StageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
