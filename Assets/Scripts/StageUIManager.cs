@@ -13,7 +13,8 @@ public class StageUIManager : MonoBehaviour
     {
         stageText.text = string.Format("ステージ : {0}", currentStage + 1);
     }
-    public void ShowButtons(bool isValid)
+    public void ShowButtons
+        (bool isValid)
     {
         nextButton.SetActive(isValid);
         toTownButton.SetActive(isValid);
