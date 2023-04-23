@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     public new string name;
     public int hp;
     public int at;
+    Action tapAction;
 
     public void Attack(PlayerManager player)
     {
@@ -18,10 +19,14 @@ public class EnemyManager : MonoBehaviour
         hp -= damege;
         Debug.Log("Enemy‚ÌHP‚Í" + hp);
     }
+    public void AddEventListenerOnTap(Action action)
+    {
+        tapAction += action;
+    }
 
     public void OnTap()
     {
-        Debug.Log("Click");
+        tapAction();
     }
 
 }
