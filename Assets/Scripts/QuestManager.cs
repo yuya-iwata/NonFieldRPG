@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public StageUIManager stageUI;
+    public GameObject enemyPrefab;
 
     //敵に遭遇するテーブル -1なら遭遇しない、0なら遭遇
     int[] encountTable = { -1, -1, 0, -1, 0,-1 };
@@ -22,8 +23,13 @@ public class QuestManager : MonoBehaviour
         }
         else if (encountTable[currentStage] == 0)
         {
-            Debug.Log("敵に遭遇");
+            EncountEnemy();
         }
+    }
+
+    void EncountEnemy()
+    {
+        Instantiate(enemyPrefab);
     }
     // Start is called before the first frame update
     void Start()
