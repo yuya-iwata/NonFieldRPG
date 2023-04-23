@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
@@ -29,6 +30,7 @@ public class QuestManager : MonoBehaviour
 
     void EncountEnemy()
     {
+        stageUI.ShowButtons(false);
         Instantiate(enemyPrefab);
     }
     // Start is called before the first frame update
