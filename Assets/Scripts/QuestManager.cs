@@ -14,11 +14,13 @@ public class QuestManager : MonoBehaviour
     public void OnNextButton()
     {
         currentStage++;
-        Debug.Log("進行度増加"+ currentStage);
         //進行度をUIに反映
         stageUI.UpdateUI(currentStage);
-
-        if (encountTable[currentStage] == 0)
+        if (encountTable.Length <= currentStage)
+        {
+            Debug.Log("クエストクリア");
+        }
+        else if (encountTable[currentStage] == 0)
         {
             Debug.Log("敵に遭遇");
         }
